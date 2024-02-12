@@ -75,6 +75,7 @@ export default function NewNoteCard ({ onNoteCreated }: NewNoteCardProps) {
     function handleStopRecording() {
         setIsRecording(false);
         if (speechRecognition) speechRecognition.stop();
+        if (content === '') setShouldShowOnboarding(true);
     }
 
     return (
